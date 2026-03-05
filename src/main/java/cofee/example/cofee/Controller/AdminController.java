@@ -111,10 +111,7 @@ public class AdminController {
     }
 
     // GET ALL Programs
-    @GetMapping("/program")
-    public ResponseEntity<List<Program>> getAllPrograms() {
-        return ResponseEntity.ok(addProgramService.getAllPrograms());
-    }
+
 
     // UPDATE Program
     @PutMapping("/program/{id}")
@@ -161,4 +158,5 @@ public class AdminController {
         return ResponseEntity.ok(courseService.deleteCourse(id));
     }
 }
+
 
