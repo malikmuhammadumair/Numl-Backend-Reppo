@@ -46,8 +46,8 @@ public class SpringSecurity {
                 )
 
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/public/**").permitAll()
-                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                         .requestMatchers("/public/**").permitAll()
+                        .requestMatchers("/admin/**").permitAll()
                         .requestMatchers("/journel/**").authenticated()
                         .anyRequest().authenticated()
                 )
@@ -123,4 +123,5 @@ public class SpringSecurity {
 
         return new Cloudinary(config);
     }
+
 }
