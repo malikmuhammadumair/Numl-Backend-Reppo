@@ -108,5 +108,12 @@ public ResponseEntity<List<JournelEntries>> getTrendingPapers() {
     public ResponseEntity<List<AddDepartment>> getAll() {
         return ResponseEntity.ok(service.getAllDepartments());
     }
+        @Autowired
+    private AddProgramService addProgramService;
+    @GetMapping("/program")
+    public ResponseEntity<List<Program>> getAllPrograms() {
+        return ResponseEntity.ok(addProgramService.getAllPrograms());
+    }
 
 }
+
