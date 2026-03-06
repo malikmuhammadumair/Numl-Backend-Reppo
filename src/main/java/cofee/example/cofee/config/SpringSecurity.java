@@ -42,7 +42,7 @@ public class SpringSecurity {
                 )
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/public/**", "/users/**").permitAll()
-                        .requestMatchers("/admin/**")..permitAll()// fixed
+                        .requestMatchers("/admin/**").permitAll()// fixed
                         .requestMatchers("/journel/**").authenticated()
                         .anyRequest().authenticated()
                 )
@@ -100,4 +100,5 @@ public class SpringSecurity {
     }
 
 }
+
 
