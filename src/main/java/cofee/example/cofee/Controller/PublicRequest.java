@@ -14,6 +14,7 @@ import java.util.List;
 @RequestMapping("/public")
 @RestController
 @CrossOrigin("*")
+    @CrossOrigin(origins = "https://www.studyhouse.online")
 public class PublicRequest {
     @Autowired
     private UserService userService;
@@ -125,3 +126,4 @@ public ResponseEntity<List<JournelEntries>> getTrendingPapers() {
         return ResponseEntity.ok(journelServices.filter(req));
     }
 }
+
