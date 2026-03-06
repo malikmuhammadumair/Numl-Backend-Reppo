@@ -68,11 +68,12 @@ public class SpringSecurity {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of(
-                "https://studyhouse.online",
-                "http://localhost:3000",
-                "http://localhost:4200" // Angular default port
-        ));
+       config.setAllowedOrigins(List.of(
+    "https://studyhouse.online",
+    "https://www.studyhouse.online",
+    "http://localhost:3000",
+    "http://localhost:4200"
+));
 
         config.setAllowedMethods(List.of(
                 "GET", "POST", "PUT", "DELETE", "OPTIONS"
@@ -97,4 +98,5 @@ public class SpringSecurity {
         config.put("secure", "true");
         return new Cloudinary(config);
     }
+
 }
