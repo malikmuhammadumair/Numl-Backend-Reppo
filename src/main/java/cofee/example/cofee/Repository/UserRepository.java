@@ -12,7 +12,7 @@ public interface UserRepository extends JpaRepository<UserEntity,Long> {
     @Query("SELECT COUNT(u.url) FROM JournelEntries u WHERE u.url IS NOT NULL")
     long countUploadedPapers();
 
-
-    @Query("SELECT COUNT(u.status) FROM JournelEntries u WHERE u.status IS NOT NULL")
-    long countpendindPapers();
+@Query("SELECT COUNT(u) FROM JournelEntries u WHERE u.status = 'pending'")
+long countpendindPapers();
 }
+
