@@ -26,7 +26,7 @@ public class UserService {
 
     public UserEntity PostnewAll(UserEntity userEntity) {
         userEntity.setPassword(passwordencorder.encode(userEntity.getPassword()));
-        userEntity.setRoles(Arrays.asList("ADMIN"));
+        userEntity.setRoles(Arrays.asList("USER"));
         return userRepository.save(userEntity);
     }
     public UserEntity PostnewAllty(UserEntity userEntity) {
@@ -86,6 +86,7 @@ public class UserService {
 
 
 }
+
 
 
 
